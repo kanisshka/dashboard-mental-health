@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Nav from '../components/Nav'
 export default function Home() {
   return (
-    <div>
+    <div className='welc'>
     <h1>Welcome to<br/>Mental Health Dashboard</h1>
     </div>
   )

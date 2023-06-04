@@ -147,7 +147,12 @@ a {
 .quizset-form button:last-child {
   margin-right: 0;
 }
-
+.welc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 #btn-sbt {
   background-color: #000000;
   color: #fff;
