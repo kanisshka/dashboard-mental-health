@@ -116,3 +116,42 @@ a {
   color: #fff6f6;
 }
 
+.quizset-form {
+  margin-top: 20px;
+}
+
+.quizset-form input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.quizset-form button {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 10px;
+  margin-bottom: 10px; /* Add margin-bottom */
+}
+
+.quizset-form button:last-child {
+  margin-right: 0;
+}
+
+.quizset-form button[type='submit'] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.quizset-form button[type='submit']:hover {
+  background-color: #555;
+}

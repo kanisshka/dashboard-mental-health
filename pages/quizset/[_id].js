@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Link from 'next/link';
 // import './Quizsetdetails.css'; // Import the CSS file
 
 const Quizsetdetails = ({ quiz }) => {
@@ -31,12 +32,15 @@ const Quizsetdetails = ({ quiz }) => {
 
   return (
     <>
+    <Link href="/quizset">
+        <p className="add-button">Back</p>
+      </Link>
       <div>
         <h1>{quiz.title}</h1>
       </div>
       <p>{quiz.desc}</p>
       <h3>Total Number of Questions: {quizset.length}</h3>
-      <div className="quizset-form"> {/* Add a class name for the form */}
+      <div className="quizset-form">
         {quizset.map((item, index) => (
           <div key={index}>
             <input
@@ -53,9 +57,9 @@ const Quizsetdetails = ({ quiz }) => {
           </div>
         ))}
         {isEditMode ? (
-          <button onClick={handleUpdateDetails}>Update Details</button> 
+          <button onClick={handleUpdateDetails}>Update Details</button>
         ) : (
-          <button onClick={() => setIsEditMode(true)}>Edit</button> 
+          <button onClick={() => setIsEditMode(true)}>Edit</button>
         )}
       </div>
     </>
