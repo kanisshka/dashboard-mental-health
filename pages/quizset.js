@@ -22,7 +22,7 @@ const Quizset = () => {
 
   return (
     <>
-      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly',gap:'30px' }}>
         {quizData.map((quiz, index) => (
           <CardQuizset key={index} quiz={quiz} />
         ))}

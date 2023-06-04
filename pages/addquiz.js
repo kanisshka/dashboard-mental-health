@@ -11,9 +11,13 @@ const addQuiz = () => {
 
   const handleChange = (e, index) => {
     const { name, value } = e.target;
-    const updatedQuiz = [...quizData.quiz];
-    updatedQuiz[index] = { ...updatedQuiz[index], [name]: value };
-    setQuizData({ ...quizData, quiz: updatedQuiz });
+    if (name === 'title' || name === 'desc') {
+      setQuizData({ ...quizData, [name]: value });
+    } else {
+      const updatedQuiz = [...quizData.quiz];
+      updatedQuiz[index] = { ...updatedQuiz[index], [name]: value };
+      setQuizData({ ...quizData, quiz: updatedQuiz });
+    }
   };
 
   const handleAddField = () => {
@@ -30,10 +34,12 @@ const addQuiz = () => {
     e.preventDefault();
     try {
       // Make an API call to save the quiz data
-      await axios.post('/api/quizzies', quizData);
+      await axios.post('https://mental-health-backend.vercel.app/api/quizzies', quizData);
       console.log('Quiz data saved successfully');
       // Reset the form after successful submission
       setQuizData({ title: '', desc: '', quiz: [{ ques: '' }] });
+      // Show success alert
+      alert('Quiz data saved successfully!');
     } catch (error) {
       console.log('Error:', error);
     }
@@ -104,7 +110,7 @@ const addQuiz = () => {
         .quiz-question {
           display: flex;
           align-items: center;
-          margin-bottom: 10px; /* Add margin-bottom */
+          margin-bottom: 10px;
         }
 
         .quiz-question input[type='text'] {
