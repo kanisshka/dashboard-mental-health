@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
 
     // If isLoggedIn is false or null and the current route is not the login page, redirect the user to the login page
-    if (!isLoggedIn && !isLoginPage) {
+    if (isLoggedIn==="false" && !isLoginPage) {
       router.push('/login');
     }
   }, []);

@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
 import axios from 'axios';
 import Link from 'next/link';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 const addQuiz = () => {
   const [quizData, setQuizData] = useState({
@@ -30,7 +32,6 @@ const addQuiz = () => {
     updatedQuiz.splice(index, 1);
     setQuizData({ ...quizData, quiz: updatedQuiz });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {

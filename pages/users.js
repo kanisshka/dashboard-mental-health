@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import axios from 'axios';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 const Users = () => {
   const [userData, setUserData] = useState([]);
-
+ 
   useEffect(() => {
     const fetchData = async () => {
       try {

@@ -3,10 +3,11 @@ import Link from 'next/link';
 import CardQuizset from '../components/CardQuizset';
 import axios from 'axios';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 const Quizset = () => {
   const [quizData, setQuizData] = useState([]);
-
+ 
   useEffect(() => {
     const fetchData = async () => {
       try {
