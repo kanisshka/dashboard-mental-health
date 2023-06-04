@@ -50,9 +50,9 @@ const Quizsetdetails = ({ quiz }) => {
               disabled={!isEditMode} // Disable input fields if not in edit mode
             />
             {index === quizset.length - 1 ? (
-              <button onClick={handleAddField}>Add Field</button>
+              <button style={{background:'#0066ff',color:'white'}} onClick={handleAddField}>Add Field</button>
             ) : (
-              <button onClick={() => handleRemoveField(index)}>Remove Field</button>
+              <button style={{background:'red',color:'white'}} onClick={() => handleRemoveField(index)}>Remove Field</button>
             )}
           </div>
         ))}

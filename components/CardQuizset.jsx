@@ -9,14 +9,14 @@ const CardQuizset = ({quiz}) => {
     <div class="card">
     <div class="card-edit">
     <Link href={`/quizset/${quiz._id}`}><EditIcon/></Link>
-    <DeleteIcon/>
+    
     </div>
-  <img src="card-image.jpg" alt="Card Image" class="card-image"/>
+  {/* <img src="card-image.jpg" alt="Card Image" class="card-image"/> */}
   <div class="card-content">
     <h2 class="card-title">{quiz.title}</h2>
     <p class="card-text">{quiz.desc}</p>
     <p class="card-text">TotalQuestions : {quiz.quiz.length}</p>
-    <a href="#" class="card-button">View</a>
+    <p style={{background:'red'}} href="#" class="card-button">Delete</p>
   </div>
 </div>
 </>
