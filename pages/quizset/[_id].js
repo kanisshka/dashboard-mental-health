@@ -4,7 +4,7 @@ import Link from 'next/link';
 // import './Quizsetdetails.css'; // Import the CSS file
 
 const Quizsetdetails = ({ quiz }) => {
-  console.log(quiz);
+  // console.log(quiz);
   const [quizset, setQuizset] = useState([...quiz.quiz]);
   const [isEditMode, setIsEditMode] = useState(false); // Track whether it's in edit mode or not
 
@@ -26,23 +26,29 @@ const Quizsetdetails = ({ quiz }) => {
   };
 
   const handleUpdateDetails = async (_id) => {
-  console.log(_id);
-  console.log('Updating details...', quizset);
-
-  try {
-    const updatedData = {
-      quiz: quizset // Pass the updated quizset array
-    };
-
-    const result = await axios.put(
-      `https://mental-health-backend.vercel.app/api/quizzies/${_id}`,
-      updatedData
-    );
-    console.log(result);
-  } catch (error) {
-    console.log(error);
-  }
-};
+    // console.log(_id);
+    // console.log('Updating details...', quizset);
+  
+    // Filter out the objects with empty ques values
+    const updatedQuizset = quizset.filter((item) => item.ques !== '');
+  
+    try {
+      const updatedData = {
+        quiz: updatedQuizset, // Pass the updatedQuizset array without empty inputs
+      };
+  
+      const result = await axios.put(
+        `https://mental-health-backend.vercel.app/api/quizzies/${_id}`,
+        updatedData
+      );
+      // console.log(result);
+      alert('Quiz details updated successfully!');
+    } catch (error) {
+      // console.log(error);
+      alert('Some error occurred!');
+    }
+  };
+  
 
   
 
