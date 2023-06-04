@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import CardQuizset from '../components/CardQuizset';
 import axios from 'axios';
+import Head from 'next/head';
 
 const Quizset = () => {
   const [quizData, setQuizData] = useState([]);
@@ -22,6 +23,9 @@ const Quizset = () => {
 
   return (
     <>
+    <Head>
+        <title>Quizset | Mental Health</title>
+      </Head>
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly',gap:'30px' }}>
         {quizData.map((quiz, index) => (
           <CardQuizset key={index} quiz={quiz} />

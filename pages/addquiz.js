@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const addQuiz = () => {
   const [quizData, setQuizData] = useState({
@@ -47,6 +48,9 @@ const addQuiz = () => {
 
   return (
     <div className="add-quiz-form">
+        <Head>
+        <title>Add Quiz | Mental Health</title>
+      </Head>
       <h1>Add Quiz</h1>
       <Link href="/quizset">
         <p className="add-button">Back</p>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import axios from 'axios';
+import Head from 'next/head';
 
 const Users = () => {
   const [userData, setUserData] = useState([]);
@@ -20,6 +21,9 @@ const Users = () => {
 
   return (
     <>
+    <Head>
+        <title>Users | Mental Health</title>
+      </Head>
       <h1>User Details</h1>
       <table>
         <thead>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
+import Head from 'next/head';
 // import './Quizsetdetails.css'; // Import the CSS file
 
 const Quizsetdetails = ({ quiz }) => {
@@ -54,6 +55,9 @@ const Quizsetdetails = ({ quiz }) => {
 
   return (
     <>
+    <Head>
+        <title>Edit Quiz | Mental Health</title>
+      </Head>
     <Link href="/quizset">
         <p className="add-button">Back</p>
       </Link>
