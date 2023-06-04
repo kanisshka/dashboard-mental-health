@@ -81,7 +81,6 @@ const addQuiz = () => {
 
       <style jsx>{`
         .add-quiz-form {
-          max-width: 600px;
           margin: 0 auto;
           padding: 20px;
         }

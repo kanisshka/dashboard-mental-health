@@ -14,17 +14,20 @@ a {
 * {
   box-sizing: border-box;
 }
-.navbar{
+
+.navbar {
   width: 20vw;
   background-color: aliceblue;
   height: 100vh;
   padding: 33px;
 }
-.navbar .lis{
+
+.navbar .lis {
   font-size: 22px;
   font-weight: 500;
   margin: 10px 0px;
 }
+
 .card-edit {
   position: absolute;
   top: 8px;
@@ -38,6 +41,7 @@ a {
   font-size: 16px;
   /* Additional styles for the edit icon */
 }
+
 .card {
   width: 300px;
   background-color: #ffffff;
@@ -103,6 +107,7 @@ a {
 .quizset-form button {
   margin-right: 10px;
 }
+
 .add-button {
   position: fixed;
   top: 20px;
@@ -135,23 +140,20 @@ a {
   cursor: pointer;
   font-size: 14px;
   margin-right: 10px;
-  margin-bottom: 10px; /* Add margin-bottom */
+  margin-bottom: 10px;
+  /* Add margin-bottom */
 }
 
 .quizset-form button:last-child {
   margin-right: 0;
 }
 
-.quizset-form button[type='submit'] {
-  background-color: #333;
+#btn-sbt {
+  background-color: #000000;
   color: #fff;
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
   cursor: pointer;
   font-size: 16px;
-}
-
-.quizset-form button[type='submit']:hover {
-  background-color: #555;
 }

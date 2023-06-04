@@ -57,9 +57,9 @@ const Quizsetdetails = ({ quiz }) => {
           </div>
         ))}
         {isEditMode ? (
-          <button onClick={handleUpdateDetails}>Update Details</button>
+          <button id="btn-sbt" onClick={handleUpdateDetails}>Update Details</button>
         ) : (
-          <button onClick={() => setIsEditMode(true)}>Edit</button>
+          <button id="btn-sbt" onClick={() => setIsEditMode(true)}>Edit</button>
         )}
       </div>
     </>
