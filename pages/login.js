@@ -15,9 +15,11 @@ const Login = () => {
       // Save isLoggedIn as true in localStorage
       localStorage.setItem('isLoggedIn', 'true');
       // Redirect the user to the '/' path
+      
       router.push('/');
     } else {
       // Save isLoggedIn as false in localStorage
+      alert("Wrong credentials!")
       localStorage.setItem('isLoggedIn', 'false');
     }
   };
