@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import CardQuizset from '../components/CardQuizset';
 import axios from 'axios';
 
@@ -21,11 +22,15 @@ const Quizset = () => {
 
   return (
     <>
-    <div style={{display:'flex', flexWrap:'wrap',justifyContent:'space-evenly'}}>
-      {quizData.map((quiz, index) => (
-        <CardQuizset key={index} quiz={quiz} />
-      ))}
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-evenly' }}>
+        {quizData.map((quiz, index) => (
+          <CardQuizset key={index} quiz={quiz} />
+        ))}
       </div>
+
+      <Link href="/addquiz">
+        <p className="add-button">Add Quiz</p>
+      </Link>
     </>
   );
 };
