@@ -11,7 +11,7 @@ const Quizsetdetails = ({ quiz }) => {
   const handleChange = (e, index) => {
     const { value } = e.target;
     const updatedQuiz = [...quizset];
-    updatedQuiz[index] = { ques: value };
+    updatedQuiz[index] = { ...updatedQuiz[index], ques: value }; // Update the specific object at the index
     setQuizset(updatedQuiz);
   };
 
@@ -25,10 +25,26 @@ const Quizsetdetails = ({ quiz }) => {
     setQuizset(updatedQuiz);
   };
 
-  const handleUpdateDetails = () => {
-    // Implement your logic to update the details using an API call
-    console.log('Updating details...');
-  };
+  const handleUpdateDetails = async (_id) => {
+  console.log(_id);
+  console.log('Updating details...', quizset);
+
+  try {
+    const updatedData = {
+      quiz: quizset // Pass the updated quizset array
+    };
+
+    const result = await axios.put(
+      `https://mental-health-backend.vercel.app/api/quizzies/${_id}`,
+      updatedData
+    );
+    console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+  
 
   return (
     <>
@@ -57,7 +73,7 @@ const Quizsetdetails = ({ quiz }) => {
           </div>
         ))}
         {isEditMode ? (
-          <button id="btn-sbt" onClick={handleUpdateDetails}>Update Details</button>
+          <button id="btn-sbt" onClick={()=>handleUpdateDetails(quiz._id)}>Update Details</button>
         ) : (
           <button id="btn-sbt" onClick={() => setIsEditMode(true)}>Edit</button>
         )}
