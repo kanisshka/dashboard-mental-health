@@ -83,7 +83,7 @@ a {
   background-color: #0056b3;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -91,4 +91,15 @@ a {
     color: white;
     background: black;
   }
+} */
+.quizset-form {
+  margin-top: 20px;
+}
+
+.quizset-form input {
+  margin-bottom: 10px;
+}
+
+.quizset-form button {
+  margin-right: 10px;
 }
