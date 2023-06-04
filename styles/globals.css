@@ -14,6 +14,74 @@ a {
 * {
   box-sizing: border-box;
 }
+.navbar{
+  width: 20vw;
+  background-color: aliceblue;
+  height: 100vh;
+  padding: 33px;
+}
+.navbar .lis{
+  font-size: 22px;
+  font-weight: 500;
+  margin: 10px 0px;
+}
+.card-edit {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+  /* Additional styles for the edit icon container */
+}
+
+.card-edit i {
+  color: #555555;
+  font-size: 16px;
+  /* Additional styles for the edit icon */
+}
+.card {
+  width: 300px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgb(157, 156, 156);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 16px;
+}
+
+.card-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
