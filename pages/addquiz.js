@@ -4,7 +4,7 @@ import axios from 'axios';
 import Link from 'next/link';
 import Head from 'next/head';
 
-const addQuiz = () => {
+const AddQuiz = () => {
   const [quizData, setQuizData] = useState({
     title: '',
     desc: '',
@@ -145,4 +145,4 @@ const addQuiz = () => {
   );
 };
 
-export default addQuiz;
+export default AddQuiz;

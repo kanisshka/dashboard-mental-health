@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
     if (!isLoggedIn) {
       router.push('/login');
     }
-  }, []);
+  }, [router]);
 
   return (
     <div style={{ display: 'flex' }}>

@@ -17,7 +17,7 @@ export default function Home() {
     if (!isLoggedIn) {
       router.push('/login');
     }
-  }, []);
+  }, [router]);
   return (
     <div className='welc'>
       <Head>

@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
     if (isLoggedIn==="false" && !isLoginPage) {
       router.push('/login');
     }
-  }, []);
+  }, [router]);
 
   // Render the login page component directly without using the Layout component
   if (router.pathname === '/login') {
